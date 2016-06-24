@@ -1,6 +1,6 @@
 # ALPHAigniter
 
-ALPHAigniter is a barebones CI 3 setup containing Ion-Auth, Modules, Smarty, JS Libs, Requests for PHP, REST Client and REST Server
+ALPHAigniter is a barebones CI 3 setup containing Ion-Auth, Modules, Smarty, JS Libs, Requests for PHP, REST Client and REST Server.
 
 This package installs the offical [CodeIgniter](https://github.com/bcit-ci/CodeIgniter) (version `3.0.*`) with secure folder structure via Composer.
 
