@@ -57,7 +57,7 @@ You must update files manually if files in `application` folder or `index.php` c
 
 * [Composer Installation](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
 * [CodeIgniter](https://github.com/bcit-ci/CodeIgniter)
-* [CodeIgniter Composer Installer](https://packagist.org/packages/kenjis/codeigniter-composer-installer)
+* [CodeIgniter Composer Installer - Kenji](https://packagist.org/packages/kenjis/codeigniter-composer-installer)
 * [Translations for CodeIgniter System](https://github.com/bcit-ci/codeigniter3-translations)
 
 ## Related Projects for CodeIgniter 3.0
