@@ -20,6 +20,7 @@ class Welcome extends MX_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$data = array('subview' => 'homepage' );
+		$this->load->view('layouts/layout', $data);
 	}
 }
