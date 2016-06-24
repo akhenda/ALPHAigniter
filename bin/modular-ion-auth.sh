@@ -58,9 +58,9 @@ sed -i -e "s/\$autoload\['libraries'] = array()/\$autoload['libraries'] = array(
 
 ## Update the Ion Auth libraries to use the auth resource
 echo "Update Ion Auth Lib to use the Auth Resources"
-sed -i -e "s/\$this->ci->load->config('ion_auth', TRUE);/\$this->ci->load->config('auth\/ion_auth', TRUE);/" ../application/modules/auth/libraries/Ion_auth.php
-sed -i -e "s/\$this->ci->lang->load('ion_auth');/\$this->ci->lang->load('auth\/ion_auth');/" ../application/modules/auth/libraries/Ion_auth.php
-sed -i -e "s/\$this->ci->load->model('ion_auth_model');/\$this->ci->load->model('auth\/ion_auth_model');/" ../application/modules/auth/libraries/Ion_auth.php
+sed -i -e "s/\$this->load->config('ion_auth', TRUE);/\$this->load->config('auth\/ion_auth', TRUE);/" ../application/modules/auth/libraries/Ion_auth.php
+sed -i -e "s/\$this->lang->load('ion_auth');/\$this->lang->load('auth\/ion_auth');/" ../application/modules/auth/libraries/Ion_auth.php
+sed -i -e "s/\$this->load->model('ion_auth_model');/\$this->load->model('auth\/ion_auth_model');/" ../application/modules/auth/libraries/Ion_auth.php
 
 ## Update the Ion Auth model to use the auth resource
 echo "Update the Ion Auth Model to use the Auth Resources"
