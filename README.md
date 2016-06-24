@@ -1,7 +1,5 @@
 # ALPHAigniter
 
-[![Latest Unstable Version](https://github.com/akhenda/ALPHAigniter)](https://github.com/akhenda/ALPHAigniter) [![License](https://github.com/akhenda/ALPHAigniter/license)](https://github.com/akhenda/ALPHAigniter)
-
 ALPHAigniter is a barebones CI 3 setup containing Ion-Auth, Modules, Smarty, JS Libs, Requests for PHP, REST Client and REST Server
 
 This package installs the offical [CodeIgniter](https://github.com/bcit-ci/CodeIgniter) (version `3.0.*`) with secure folder structure via Composer.
@@ -9,14 +7,14 @@ This package installs the offical [CodeIgniter](https://github.com/bcit-ci/CodeI
 You can update CodeIgniter system folder to latest version with one command.
 
 ## What's included
-- [Codeigniter 3](https://github.com/bcit-ci/CodeIgniter);
-- Ion-auth;
-- HMVC third-party (modular applications);
-- Smarty (Template Engine);
-- JS Libraries (Jquery,Loadash,Bootstrap);
-- Requests for PHP;
-- REST Client;
-- REST Server;
+- [Codeigniter 3](https://github.com/bcit-ci/CodeIgniter)
+- Ion Auth
+- HMVC third-party (modular applications)
+- Smarty (Template Engine)
+- JS Libraries (Jquery,Loadash,Bootstrap)
+- Requests for PHP
+- REST Client
+- REST Server
 
 ## Folder Structure
 
