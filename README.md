@@ -69,3 +69,29 @@ You must update files manually if files in `application` folder or `index.php` c
 * [CodeIgniter Deployer](https://github.com/kenjis/codeigniter-deployer)
 * [CodeIgniter3 Filename Checker](https://github.com/kenjis/codeigniter3-filename-checker)
 * [CodeIgniter Widget (View Partial) Sample](https://github.com/kenjis/codeigniter-widgets)
+
+## Web App Example included
+
+### ASK AWAY
+
+#### USER STORIES
+
+```
+View a list of questions
+View a single question
+Answer a question
+Ask a question when logged in
+login
+register
+```
+
+#### CONTROLLERS/ACTIONS
+
+```
+questions/add
+questions/detail
+questions/listing
+
+users/register
+users/login
+```
