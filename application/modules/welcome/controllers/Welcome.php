@@ -20,7 +20,7 @@ class Welcome extends MX_Controller {
 	 */
 	public function index()
 	{
-		$this->output->enable_profiler(TRUE);
+		$this->output->enable_profiler(ENVIRONMENT == 'development');
 		$data = array('subview' => 'homepage' );
 		$this->load->view('layouts/layout', $data);
 	}
