@@ -53,7 +53,7 @@
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
- // 	date_default_timezone_set('Africa/Nairobi');
+ date_default_timezone_set('Africa/Nairobi');
 
 	switch ($_SERVER['HTTP_HOST']) {
 		case 'alphaigniter.com':
