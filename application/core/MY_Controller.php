@@ -4,6 +4,8 @@
 require APPPATH."third_party/MX/Controller.php";
 
 class MY_Controller extends MX_Controller {
+
+    protected $data = array();
     function __construct() {
         parent::__construct();
 
@@ -16,6 +18,11 @@ class MY_Controller extends MX_Controller {
         // }
 
         $this->output->enable_profiler(ENVIRONMENT == 'development');
+
+        $this->data['page_title'] = 'ALPHAigniter';
+        $this->data['page_description'] = 'A barebones CI 3 setup';
+        $this->data['before_closing_head'] = '';
+        $this->data['before_closing_body'] = '';
     }
 
     /**

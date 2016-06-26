@@ -1,5 +1,5 @@
 <?php
-class Users extends MY_Controller {
+class Users extends Backend_Controller {
 
     public function __construct() {
         parent::__construct();
@@ -20,9 +20,16 @@ class Users extends MY_Controller {
                 // TODO: Redirect
                 // TODO: Error Message
         // Set subview & load layout
+
         $this->load_view('auth/login');
     }
 
-    public function register()
-    {}
+    public function register(){
+
+    }
+
+    public function index() {
+        $this->load->view('welcome/welcome_message');
+    }
+
 }
