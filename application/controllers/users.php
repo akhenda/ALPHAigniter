@@ -24,6 +24,10 @@ class Users extends MY_Controller
                 // TODO: Redirect
                 // TODO: Error Message
         // TODO: Set subview & load layout
+
+        $this->load->model('question_model');
+        $questions = $this->question_model->get_all();
+        dump($questions);
     }
 
     public function register ()
