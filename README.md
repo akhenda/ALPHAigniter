@@ -74,7 +74,7 @@ You must update files manually if files in `application` folder or `index.php` c
 
 ### ASK AWAY
 
-#### USER STORIES
+#### User Stories
 
 ```
 View a list of questions
@@ -85,7 +85,7 @@ login
 register
 ```
 
-#### CONTROLLERS/ACTIONS
+#### Controllers/Actions
 
 ```
 questions/add
