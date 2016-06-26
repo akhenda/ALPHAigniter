@@ -22,14 +22,11 @@ class Welcome extends MX_Controller {
 	 function __construct(){
 		 parent::__construct();
 		 $this->load->library('auth/ion_auth');
-		 $this->load->library('auth/bcrypt');
 	 }
 	public function index()
 	{
-
-		$this->benchmark->mark('auth_start');
 		$user = $this->ion_auth->user()->row();
-		$this->benchmark->mark('auth_end');
+		dump($user);
 
 		$this->output->enable_profiler(ENVIRONMENT == 'development');
 		$data = array('subview' => 'homepage' );
