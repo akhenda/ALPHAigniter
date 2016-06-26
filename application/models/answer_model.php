@@ -20,14 +20,14 @@ class Answer_model extends MY_Model {
      * Insert an answer from POST values
      * @see MY_Model::insert()
      */
-    public function insert ()
-    {
-        $data = array(
-            'user_id' => $this->input->post('user_id'),
-            'questions_id' => $this->input->post('questions_id'),
-            'text' => $this->input->post('text'),
-        );
-
-        parent::insert($data);
-    }
+    // public function insert ()
+    // {
+    //     $data = array(
+    //         'user_id' => $this->input->post('user_id'),
+    //         'questions_id' => $this->input->post('questions_id'),
+    //         'text' => $this->input->post('text'),
+    //     );
+    //     //$this->load->model('answer_model');
+    //     //$this->answer_model->insert($data);
+    // }
 }

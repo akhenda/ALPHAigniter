@@ -19,12 +19,10 @@ class Welcome extends MY_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 
-	 function __construct(){
-		 parent::__construct();
-	 }
-	public function index()
-	{
-		$this->output->enable_profiler(ENVIRONMENT == 'development');
+	function __construct(){
+		parent::__construct();
+	}
+	public function index() {
 		$data = array('subview' => 'homepage' );
 		$this->load->view('layouts/layout', $data);
 	}

@@ -26,7 +26,7 @@ class Users extends MY_Controller
         // TODO: Set subview & load layout
 
         $this->load->model('question_model');
-        $questions = $this->question_model->with('user')->get(1);
+        $questions = $this->question_model->with('answers')->get(1);
         dump($questions);
     }
 
