@@ -1,12 +1,11 @@
 <?php
-class Question_model extends MY_Model
-{
-    protected $belongs_to = array('user');
-    public $has_many = array('answers' => array('primary_key' => 'questions_id', 'model' => 'answer_model'));
-
-    public function __construct ()
-    {
+class Question_model extends MY_Model {
+    public function __construct () {
         parent::__construct();
+
+        $this->has_one['user'] = array('foreign_model'=>'user_model','foreign_table'=>'users','foreign_key'=>'id','local_key'=>'user_id');
+        $this->has_many['answers'] = array('foreign_model'=>'answer_model','foreign_table'=>'answers','foreign_key'=>'questions_id','local_key'=>'id');
+
         $this->_database = $this->db;
     }
 
