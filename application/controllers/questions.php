@@ -41,7 +41,6 @@ class Questions extends Backend_Controller{
   {
       // Fetch all questions
       $this->data['questions'] = $this->question_model->get_with_users();
-      dump($this->data['questions']);
 
       // Load view
       $this->load_view('questions/listing');
