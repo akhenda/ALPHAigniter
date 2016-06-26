@@ -21,11 +21,9 @@ class MY_Controller extends MX_Controller {
      * Set subview and load layout
      * @param  string $subview
      */
-    public function load_view($subview, $moredata) {
-        // $data = array('subview' => $subview );
-        $data = $moredata;
-        $data['subview'] = $subview;
-		$this->load->view('layouts/layout', $data);
+    public function load_view($subview) {
+        $this->data['subview'] = $subview;
+		$this->load->view('layouts/layout', $this->data);
     }
 }
 
