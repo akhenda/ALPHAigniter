@@ -52,7 +52,7 @@ class Backend_Controller extends MY_Controller {
     function __construct() {
         parent::__construct();
 
-        $this->load->library(array('auth/ion_auth','form_validation'));
+        $this->load->library('auth/ion_auth');
 		$this->load->helper(array('url','language'));
 		$this->form_validation->set_error_delimiters($this->config->item('error_start_delimiter', 'ion_auth'), $this->config->item('error_end_delimiter', 'ion_auth'));
 		$this->lang->load('auth/auth');
