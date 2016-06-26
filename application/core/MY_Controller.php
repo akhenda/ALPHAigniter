@@ -9,14 +9,6 @@ class MY_Controller extends MX_Controller {
     function __construct() {
         parent::__construct();
 
-        // $this->load->library('auth/ion_auth');
-
-        // Check authentication
-        // $no_redirect = array('auth/login');
-        // if ($this->ion_auth->logged_in() == false && ! in_array(uri_string(), $no_redirect)) {
-        //     redirect('auth/login');
-        // }
-
         $this->output->enable_profiler(ENVIRONMENT == 'development');
 
         $this->data['page_title'] = 'ALPHAigniter';
@@ -29,8 +21,10 @@ class MY_Controller extends MX_Controller {
      * Set subview and load layout
      * @param  string $subview
      */
-    public function load_view($subview) {
-        $data = array('subview' => $subview );
+    public function load_view($subview, $moredata) {
+        // $data = array('subview' => $subview );
+        $data = $moredata;
+        $data['subview'] = $subview;
 		$this->load->view('layouts/layout', $data);
     }
 }
@@ -58,13 +52,16 @@ class Backend_Controller extends MY_Controller {
     function __construct() {
         parent::__construct();
 
-        $this->load->library('auth/ion_auth');
+        $this->load->library(array('auth/ion_auth','form_validation'));
+		$this->load->helper(array('url','language'));
+		$this->form_validation->set_error_delimiters($this->config->item('error_start_delimiter', 'ion_auth'), $this->config->item('error_end_delimiter', 'ion_auth'));
+		$this->lang->load('auth/auth');
 
         // Check authentication
-        // $no_redirect = array('auth/login');
-        // if ($this->ion_auth->logged_in() == false && ! in_array(uri_string(), $no_redirect)) {
-        //     redirect('auth/login');
-        // }
+        $no_redirect = array('users/login');
+        if ($this->ion_auth->logged_in() == false && ! in_array(uri_string(), $no_redirect)) {
+            redirect('users/login');
+        }
     }
 
 }
