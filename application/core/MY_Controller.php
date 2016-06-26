@@ -13,4 +13,8 @@ class MY_Controller extends CI_Controller {
 
         $this->output->enable_profiler(ENVIRONMENT == 'development');
     }
+    public function load_view($subview) {
+        $data = array('subview' => 'homepage' );
+		$this->load->view('layouts/layout', $data);
+    }
 }

@@ -23,7 +23,6 @@ class Welcome extends MY_Controller {
 		parent::__construct();
 	}
 	public function index() {
-		$data = array('subview' => 'homepage' );
-		$this->load->view('layouts/layout', $data);
+		
 	}
 }
