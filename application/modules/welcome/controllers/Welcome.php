@@ -18,8 +18,19 @@ class Welcome extends MX_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+
+	 function __construct(){
+		 parent::__construct();
+		 $this->load->library('auth/ion_auth');
+		 $this->load->library('auth/bcrypt');
+	 }
 	public function index()
 	{
+
+		$this->benchmark->mark('auth_start');
+		$user = $this->ion_auth->user()->row();
+		$this->benchmark->mark('auth_end');
+
 		$this->output->enable_profiler(ENVIRONMENT == 'development');
 		$data = array('subview' => 'homepage' );
 		$this->load->view('layouts/layout', $data);
