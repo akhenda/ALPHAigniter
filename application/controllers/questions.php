@@ -34,10 +34,6 @@ class Questions extends Backend_Controller{
       if (count($_POST)){
         $this->answer_model->insert();
       }
-      
-      $this->form_validation->set_rules($this->answer_model->validation);
-      $this->form_validation->run();
-      dump($this->input->post('text'));
 
       // Load view
       $this->load_view('questions/detail');
