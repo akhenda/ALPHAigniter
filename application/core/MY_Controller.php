@@ -9,6 +9,8 @@ class MY_Controller extends MX_Controller {
     function __construct() {
         parent::__construct();
 
+        $this->load->driver('cache', array('adapter' => 'file'));
+
         $this->output->enable_profiler(ENVIRONMENT == 'development');
 
         $this->data['page_title'] = 'ALPHAigniter';
